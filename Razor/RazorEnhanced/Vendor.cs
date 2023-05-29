@@ -405,7 +405,7 @@ namespace RazorEnhanced
             }
         }
 
-        internal static void RefreshLists()
+        public static void RefreshLists()
         {
             List<SellAgentList> lists = Settings.SellAgent.ListsRead();
 
@@ -504,7 +504,7 @@ namespace RazorEnhanced
             RazorEnhanced.SellAgent.InitGrid();
         }
 
-        internal static void AddList(string newList)
+        public static void AddList(string newList)
         {
             RazorEnhanced.Settings.SellAgent.ListInsert(newList, 0);
 
@@ -512,7 +512,7 @@ namespace RazorEnhanced
             RazorEnhanced.SellAgent.InitGrid();
         }
 
-        internal static void RemoveList(string list)
+        public static void RemoveList(string list)
         {
             if (RazorEnhanced.Settings.SellAgent.ListExists(list))
             {
@@ -523,7 +523,7 @@ namespace RazorEnhanced
             RazorEnhanced.SellAgent.InitGrid();
         }
 
-        internal static void AddItemToList(string name, int graphics, int amount, int color)
+        public static void AddItemToList(string name, int graphics, int amount, int color)
         {
             Engine.MainWindow.VendorSellGridView.Rows.Add(new object[] { "True", name, "0x" + graphics.ToString("X4"), amount, "0x" + color.ToString("X4") });
             CopyTable();
