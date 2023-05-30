@@ -394,7 +394,7 @@ namespace RazorEnhanced
             }
         }
 
-        internal static void AddLog(string addlog)
+        public static void AddLog(string addlog)
         {
             if (Client.Running)
             {
