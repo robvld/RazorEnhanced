@@ -383,7 +383,7 @@ namespace RazorEnhanced
             set { m_listname = value; }
         }
 
-        internal static int SellBag
+        public static int SellBag
         {
             get { return m_sellbag; }
 
