@@ -2579,6 +2579,12 @@ namespace Assistant
             List<int> switchesid = new List<int>();
 
             RazorEnhanced.GumpInspector.GumpResponseAddLogMain(ser, gumpID, bid);
+            Gumps.lastKnownGumpButtonClientData = new Gumps.GumpData()
+            {
+                serial = ser,
+                gumpId = gumpID,
+                buttonid = bid
+            };
 
             World.Player.HasGump = false;
             World.Player.CurrentGumpI = 0;
