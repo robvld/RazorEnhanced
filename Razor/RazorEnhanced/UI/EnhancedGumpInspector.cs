@@ -50,5 +50,20 @@ namespace RazorEnhanced.UI
                 Assistant.Utility.ClipBoardCopy(selected.Substring(selected.IndexOf(':') + 1));
             }
         }
+
+        private void razorButton2_Click_2(Object sender, EventArgs e)
+        {
+            if (EnhancedGumpInspectorListBox.Items != null)
+            {
+                string copiedValues = "";
+
+                foreach (var item in EnhancedGumpInspectorListBox.Items)
+                {
+                    copiedValues += item.ToString() + Environment.NewLine;
+                }
+
+                Clipboard.SetText(copiedValues);
+            }
+        }
     }
 }

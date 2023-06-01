@@ -30,11 +30,12 @@ namespace RazorEnhanced.UI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EnhancedGumpInspector));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.close = new  System.Windows.Forms.Button ();
-            this.clear = new  System.Windows.Forms.Button ();
+            this.close = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.razorButton1 = new  System.Windows.Forms.Button ();
+            this.razorButton1 = new System.Windows.Forms.Button();
+            this.razorButton2 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,17 +83,28 @@ namespace RazorEnhanced.UI
             // 
             this.razorButton1.Location = new System.Drawing.Point(19, 48);
             this.razorButton1.Name = "razorButton1";
-            this.razorButton1.Size = new System.Drawing.Size(75, 32);
+            this.razorButton1.Size = new System.Drawing.Size(75, 38);
             this.razorButton1.TabIndex = 5;
             this.razorButton1.Text = "Copy value to Clipboard";
             this.razorButton1.UseVisualStyleBackColor = true;
             this.razorButton1.Click += new System.EventHandler(this.razorButton1_Click_1);
+            // 
+            // razorButton2
+            // 
+            this.razorButton2.Location = new System.Drawing.Point(533, 104);
+            this.razorButton2.Name = "razorButton2";
+            this.razorButton2.Size = new System.Drawing.Size(75, 34);
+            this.razorButton2.TabIndex = 6;
+            this.razorButton2.Text = "Copy list to Clipboard";
+            this.razorButton2.UseVisualStyleBackColor = true;
+            this.razorButton2.Click += new System.EventHandler(this.razorButton2_Click_2);
             // 
             // EnhancedGumpInspector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 392);
+            this.Controls.Add(this.razorButton2);
             this.Controls.Add(this.close);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -112,8 +124,6 @@ namespace RazorEnhanced.UI
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button razorButton1;
-
-
-
+        private System.Windows.Forms.Button razorButton2;
     }
 }
