@@ -144,7 +144,7 @@ namespace RazorEnhanced
             }
         }
 
-        internal static GumpData lastKnownGumpButtonClientData;
+        internal static GumpData lastGumpButtonData;
 
         /// <summary>
         /// Validates if the gumpid provided exists in the gump file
@@ -683,7 +683,7 @@ namespace RazorEnhanced
             World.Player.CurrentGumpTile.Clear();
             World.Player.CurrentGumpI = 0;
             Gumps.RemoveGump(gumpid);
-            lastKnownGumpButtonClientData = null;
+            lastGumpButtonData = null;
         }
 
         /// <summary>
@@ -695,7 +695,7 @@ namespace RazorEnhanced
             World.Player.CurrentGumpStrings.Clear();
             World.Player.CurrentGumpTile.Clear();
             World.Player.CurrentGumpI = 0;
-            lastKnownGumpButtonClientData = null;
+            lastGumpButtonData = null;
         }
 
 
@@ -1167,9 +1167,9 @@ namespace RazorEnhanced
         /// Get the gump button id that is being sent from the client to the server
         /// </summary>
         /// <returns>GumpData</returns>
-        public static GumpData GetLastKnownGumpButtonClientData()
+        public static GumpData LastGumpButtonData()
         {
-            return lastKnownGumpButtonClientData;
+            return lastGumpButtonData;
         }
     }
 }
